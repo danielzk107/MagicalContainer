@@ -13,7 +13,6 @@ TEST_CASE("Node operators")
     CHECK_FALSE(n1 == n2);
     Node n3 = Node(4);
     CHECK_FALSE(n1 == n3); // False as they have different addresses
-    // CHECK(n1 == n1);
 }
 
 TEST_CASE("Container Addition and Removal")
@@ -109,8 +108,6 @@ TEST_CASE("Iterating over containers")
     ++itr1;
     CHECK(itr1 == ascItr1.end());
     ariel::MagicalContainer::AscendingIterator itr2 = ascItr2.end();
-    // CHECK_THROWS(itr1 == itr2); // itr1 and itr2 iterate over different containers, and cannot be compared
-    // CHECK_THROWS((itr1 != itr2));
 
     
     // Test PrimeIterator
