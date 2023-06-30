@@ -115,4 +115,8 @@ TEST_CASE("Iterating over containers")
     CHECK(*primeItr == 3);
     ++primeItr;
     CHECK(primeItr == --primeItr1.end());
+
+    // Comparing different containers:
+    CHECK_THROWS(ascItr1 == ascItr2);
+    CHECK_THROWS(ascItr1 == primeItr2);
 }
